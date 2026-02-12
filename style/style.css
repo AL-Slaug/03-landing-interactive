@@ -1,0 +1,789 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+h1 {
+
+    font-family: "DM Serif Display", system-ui;
+    font-weight: 400;
+    font-size: 96px; 
+    font-style: normal;
+    text-transform: uppercase;
+
+      
+}
+
+h2 {
+    font-family: "DM Serif Display", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 48px;
+}
+
+button {
+    font-family: Open Sans;
+    font-size: 12px;
+    text-align: center;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    font-variation-settings:"wdth" 100;
+    background: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+    max-width: 100vw;
+}
+
+.container {
+    width: 100vw;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header__inner {
+    background: url(../images/header-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 1);
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 530px 185px 530px;
+    justify-content: center;
+}
+
+.nav-menu-1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-menu-2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.layout-container{
+    position: relative;
+    width: 100%;
+}
+
+.line-container {
+    display: flex;
+    position: absolute;
+    top: 131px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+.line-centr {
+    margin-top: 106px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 60px 998px 60px;
+    grid-template-rows: 1fr 60px 1fr;
+    justify-content: center;
+    margin-top: 225px;
+    gap: 0 61px;
+}
+
+.content__work-time {
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+}
+.content__items {
+    text-align: center;
+}
+
+.content__title {
+    position: relative;
+}
+
+.content__title::before {
+    content: '';
+    position: absolute;
+    left: calc(100% / 2 - 30px);
+    bottom: 0;
+    height: 5px;
+    width: 60px;
+    border-radius: 50px;
+    background: rgba(232, 195, 0, 1);
+
+}
+
+.content__text {
+    letter-spacing: 0.5em;
+}
+
+.content__sicial {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.content__btn {
+    grid-column: 1 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 40px;
+}
+
+.btn--reserve {
+    border: 1px solid  rgba(232, 195, 0, 1);
+    background-color: rgba(232, 195, 0, 1);
+    border-radius: 5%;
+    width: 200px;
+    height: 60px;
+    color: #fff;
+}
+
+.content__btn--explore {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5%;
+    width: 200px;
+    height: 60px;
+    color: #fff;
+}
+
+.down-btn {
+    grid-column: 2 / 3;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.about__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.about__content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.about__title {
+    text-transform: uppercase;
+    position: relative;
+    padding: 20px 0;
+}
+
+.about__title::before {
+    content: '';
+    position: absolute;
+    left: calc(100% / 2 - 31px);
+    bottom: 0;
+    border-radius: 50px;
+    width: 60px;
+    height: 5px;
+    background: rgba(232, 195, 0, 1);
+
+}
+
+.about__sub-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.about__img {
+    position: relative;
+}
+
+.about__img-square {
+    position: absolute;
+    left: 50%;
+    top: 11%;
+}
+
+.team-box {
+    background: url(../images/specialty-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 100px;
+
+}
+
+.team__caption {
+    text-align: center;
+    letter-spacing: 0.5em;
+    padding: 50px 0;
+}
+.team__inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.team__img {
+    position: relative;
+}
+
+.team__img-square {
+    position: absolute;
+    right: 50%;
+    top: 11%;
+}
+.team__content {
+    max-width: 600px;
+    text-align: center;
+}
+.team__title {
+    text-transform: uppercase;
+    position: relative;
+    padding: 20px 0;
+}
+
+.team__title::before {
+    content: '';
+    position: absolute;
+    left: calc(100% / 2 - 36px);
+    bottom: 0;
+    border-radius: 50px;
+    height: 5px;
+    width: 65px;
+    background: rgba(232, 195, 0, 1);
+
+}
+
+.team__sub-title {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+
+.booking__items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.form__title {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.form__title::before {
+    content: '';
+    position: absolute;
+    left: calc(100% / 2 - 36px);
+    bottom: 0;
+    border-radius: 50px;
+    height: 5px;
+    width: 60px;
+    background: rgba(232, 195, 0, 1);
+}
+
+.form {
+    max-width: 566px;
+    height: 351px;
+}
+
+.form__details {
+    display: grid;
+    grid-template-columns: 276px 276px;
+    grid-template-rows: repeat(3, 60px);
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.form__details .input-box input {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(229, 229, 229, 1);
+    border-radius: 5px;
+    border: none;
+    padding-left: 20px;
+}
+
+.booking__btn {
+    background-color: rgba(232, 195, 0, 1);
+    height: 60px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+}
+
+.btn-booknow {
+    color: #FFF;
+}
+
+.booking__img {
+    position: relative;
+}
+
+.booking__img::before {
+    content: '';
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 20px solid rgba(232, 195, 0, 1);
+    border-radius: 5px;
+    left: 70%;
+    top: calc(100% / 2 - 124px);
+    z-index: 1;
+}
+
+.booking__work-time {
+    display: flex;
+    justify-content: center;
+}
+
+
+.specialties {
+    margin-top: 50px;
+}
+
+
+.specialties__swiper{
+    width: 1440px;
+    height: 675px;
+    position: relative;
+    background: url(../images/specialtys-bg.png);
+    background-size: cover;
+}
+
+.specialties__img {
+    position: relative;
+}
+
+.specialties__img::before {
+    content: '';
+    position: absolute;
+    width: 201px;
+    height: 200px;
+    border: 20px solid rgba(232, 195, 0, 1);
+    border-radius: 5px;
+    right: 70%;
+    top: calc(100% / 2 - 124px);
+    z-index: 1;
+}
+
+.caption {
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50px 0;
+}
+
+.specialties__box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.specialties__content {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    text-align: center;
+}
+
+.specialties__title {
+    text-transform: uppercase;
+    position: relative;
+    padding: 20px 0;
+}
+
+.specialties__title::before {
+    content: '';
+    position: absolute;
+    left: calc(100% / 2 - 36px);
+    bottom: 0;
+    border-radius: 50px;
+    height: 5px;
+    width: 65px;
+    background: rgba(232, 195, 0, 1);
+}
+
+.specialties__subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10; 
+}
+
+
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.7; 
+}
+.swiper-pagination-bullet-active {
+    background: rgba(255, 255, 255, 1);
+}
+
+.restoran-menu__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.restoran-menu__title {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.restoran-menu__title::before {
+    content: '';
+    position: absolute;
+    left: calc(100% / 2 - 36px);
+    bottom: 0;
+    border-radius: 50px;
+    height: 5px;
+    width: 61px;
+    background: rgba(232, 195, 0, 1);
+}
+
+.restoran-menu__subtitle {
+    padding-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 566px;
+    text-align: center;
+}
+
+.restoran-menu__items {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.restoran-menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 50px;
+
+} 
+
+.restoran-menu__list:not(:last-child) a{
+    border-right: 1px solid rgba(51, 51, 51, 0.2);
+    text-align: center;
+    width: 120px;
+    height: 50px;
+}
+
+.restoran-menu__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.restoran-menu__position {
+    margin-top: 50px;
+}
+
+.position-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.position-menu__title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.position-menu__price {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.position-menu__description {
+    padding-bottom: 30px;
+}
+
+.events__box {
+    background: url(../images/specialtys-bg.png);
+    background-size: cover;
+    width: 100%;
+    height: 675px;
+    margin-top: 100px;
+}
+
+.event__caption {
+    color: rgba(255, 255, 255, 1);
+    padding: 50px 0;
+    text-align: center;
+    letter-spacing: 0.5em;
+}
+
+.events__contact {
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+
+}
+
+.events__description {
+    display: flex;
+    justify-content: space-around;
+}
+
+.events__content1 {
+    position: relative;
+}
+
+.events__content2 {
+    position: relative;
+}
+
+.events__text1 {
+    font-family: "DM Serif Display", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    display: block;
+    position: absolute;
+    bottom: 42%;
+    left: 45%;
+    color: rgba(255, 255, 255, 1);
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    background-color: #000;
+    height: 80px;
+    width: 397px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 20px;
+}
+
+.events__text2 {
+    font-family: "DM Serif Display", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    position: absolute;
+    right: 43%;
+    bottom: 42%;
+    color: rgba(255, 255, 255, 1);
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    background-color: #000;
+    height: 80px;
+    width: 397px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 20px;
+}
+
+
+.galerie__box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.galerie__img {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    transition: transform 0.3s ease; /* Плавный переход при увеличении */
+}
+
+.modal-content.enlarged {
+    transform: scale(1.4); /* Увеличивает изображение на 20% */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contactc__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.contactc__title {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.contactc__title::before {
+    content: '';
+    position: absolute;
+    left: calc(100% / 2 - 36px);
+    bottom: 0;
+    border-radius: 50px;
+    height: 5px;
+    width: 61px;
+    background: rgba(232, 195, 0, 1);
+}
+
+.contakt-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.contactc__subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.contakt-form__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.contakt-form__inners input {
+    width: 420px;
+    height: 60px;
+    background-color: rgba(229, 229, 229, 1);
+    border-radius: 5px;
+    border: none;
+    padding-left: 20px;
+}
+
+.contakt-form__inners textarea {
+    width: 1280px;
+    height: 120px;
+    background-color: rgba(229, 229, 229, 1);
+    border-radius: 5px;
+    border: none;
+    padding: 20px 20px;
+    resize: none;
+}
+
+.contakt-form__сonnect {
+    display: flex;
+    align-items: baseline;
+}
+
+.contakt-form__сonnect i {
+    color: rgba(232, 195, 0, 1);
+}
+
+.contakt-form__btn {
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.btn-send {
+    font-weight: bold;
+    width: 640px;
+    height: 60px;
+    background: rgba(232, 195, 0, 1);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.fa-solid {
+    padding-right: 10px;
+}
+
+.fa-phone-flip, .fa-envelope {
+    padding-left: 15px;
+}
+
+.map__box {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.footer__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 0.5);
+}
