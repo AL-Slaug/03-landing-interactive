@@ -8,7 +8,7 @@ A dynamic landing page featuring interactive components and third-party library 
 - **Swiper.js** (Modern slider library)
 
 ## 🚀 Live Demo
-
+https://al-slaug.github.io/03-landing-interactive/
 
 ## Key Features
 - **Library Integration:** Custom slider implementation using Swiper.js.
